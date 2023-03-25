@@ -1,0 +1,250 @@
+/* 
+    Paleta de colores
+    #A60815, #BF0F30, #F2F2F2, #402319, #D0ADA0
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro";
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.container_header{
+    width: 100%;
+    height: 41%;
+    background-color: #402319;
+    background-image: linear-gradient(10deg, #4023199c,#a6081584, #f2f2f267),url(../img/Fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 0.1px;
+}
+.menu{
+    text-align: right;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.menu a{
+    color: #f2f2f2fc;
+    text-decoration: none;
+}
+hr{
+    border-color: #4023196d;
+}
+.menu > li{
+    display: inline-block;
+    padding: 1.2% 2.2%;
+    background-color: #a60815f5;
+    margin-top: 2%;
+    border-radius: 10px;
+    color: #f2f2f2ed;
+    font-size: 22px;
+}
+.menu li:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+    background-color: #f2f2f2;
+}
+.menu .btn_contacto{
+    background-color: #a6081584;
+    border: 3px solid #402319;
+}
+
+.title{
+    text-align: center;
+    font-size: 4em;
+    margin: 1%;
+    color: #f2f2f2;
+}
+.fm_contact{
+    width: 45%;
+    height: auto; /* ocupe hacia abajo todo lo que deba */
+    margin: 2% auto;
+    border: 5px solid #402319;
+    border-radius: 10px;
+    padding: 2% 1%;
+    text-align: center;
+}
+.fm_contact > hr{
+    margin-bottom: 3% ;
+}
+.title_form{
+    margin: 2% 0;
+    text-align: center;
+    color: #a60815f5;
+}
+.fm_contact >input, label, button{
+    display: inline-block;
+    width: 80%;
+    margin: 1% 0;
+    font-size: 22px;
+
+}
+.fm_contact > input, .msn{
+    padding: 2% 2%;
+    border: none;
+    border-bottom: 2px solid #402319;
+    outline: none;
+    background-color: #fce4e471;
+}
+.msn{
+    width: 80%;
+}
+.fm_contact > label{
+    text-align: left;
+    padding: 5px;
+}
+input:focus, .msn:focus{
+    border-bottom: none;
+    border-right: 2px solid #402319;
+    background-color: #1f1d1d25;
+}
+.fm_contact .rol{
+    width: 80%;
+    border-radius: 10px;
+    padding: 1.8%;
+    font-size: 22px;
+    background-color: #fce4e471;
+}
+.btn_enviar, .btnRegistrar, .btnCancelar{
+    width:30%;
+    text-align: center;
+    margin-top: 3%;
+    padding: 10px 20px;
+    background-color: #a60815f5;
+    border-radius: 10px;
+    font-size: 25px;
+    border: 2px solid #0f0101;
+    color: #F2F2F2;
+    cursor: pointer;
+}
+.btn_enviar:hover{
+    background-color: #BF0F30;
+    text-decoration: underline;
+}
+.footer{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;  /* direccion */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    background-image: linear-gradient(10deg, #402040, #a3a3a3, #BF0F30, #a60815f5 60%);
+    overflow: hidden;
+}
+.foot{
+    display: inline;
+    margin: 3%;
+    text-align: center;
+}
+.copy{
+    width: 30%;
+    height: auto;
+    color: #f2f2f2;
+    line-height: 40px;
+}
+.my_nets, .map{
+    width: 30%;
+    height: auto;
+}
+
+.title_about, .title_nets, .title_ubi{
+    color: #f2f2f2;
+    margin-bottom: 3%;
+    padding: 1%;
+}
+.social_net > li{
+    padding: 1%;
+}
+.nets{
+    width: 8%;
+}
+.foot > iframe{
+    width: 100%;
+    height: auto;
+    border: 0;
+}
+.credits{
+    width: 100vw;
+    padding: 2%;
+    background-color: #402319;
+    text-align: right;
+    color: #f2f2f2;
+    overflow: hidden;
+}
+.credits > a{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.card{
+    width: 60%;
+    margin: 5% auto; 
+    border: 2px solid #402319; 
+    background-color: #F2F2F2;
+    text-align: center;
+} 
+.title-card{
+    font-size: 24px;
+    padding: 2%;
+}
+.data-card, .text-mail{
+    font-size: 20px;
+    color: #402319;
+    padding: 1% 0;
+} 
+.text-rol, .text-msn{
+    font-size: 22px;
+    padding: 1% 0;
+}
+.text-telefono{
+    font-size: 22px;
+    padding: 2% 0;
+}
+.btnRegistrar:hover, .btnCancelar:hover{
+    background: #BF0F30; 
+    text-decoration:underline;
+}
+.alerta{
+    width: 30%;
+    height: auto; 
+    background: #BF0F30; 
+    position: fixed;
+    top: calc(100vh - 65%);
+    left: calc(100vw - 65%);
+    text-align: center; 
+    border: 2px solid #402319;
+    padding: 5px;
+} 
+.textAlerta{
+    width: 100%;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    color: aliceblue;
+    font-size: 20px;
+}
+.btnAlerta{
+    width: 40%;
+    height: auto; 
+    margin-right: 1% ;
+    margin-bottom: 3%;
+    background: #402319; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 14px;
+    color: #F2F2F2;
+    padding: 2%;
+}
+/* Estilo de validacion */
+.is-valid{
+    border-bottom: 2px solid #64e509 !important;
+}
+.is-invalid{
+    border-bottom: 2px solid #ea0909 !important;
+}
