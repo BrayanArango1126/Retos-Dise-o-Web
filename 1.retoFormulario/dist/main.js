@@ -11,7 +11,7 @@ const objectValid ={
     nameObject: false,
     lastNameObject: false,
     mailObject: false,
-    rolObjetc: false,
+    cargoObjetc: false,
     teleObject: false,
     msnObject: false
 }
@@ -62,9 +62,9 @@ form.addEventListener("change", function(event){
             //console.log(Object.values(objectValid));
             break;  
         
-        case "rol":
-            objectValid.rolObjetc = validator.validRol(inputValue);
-            objectValid.rolObjetc ? validClass() : invalidClass();
+        case "cargo":
+            objectValid.cargoObjetc = validator.validCargo(inputValue);
+            objectValid.cargoObjetc ? validClass() : invalidClass();
             //console.log(Object.values(objectValid));
             break;
         
@@ -91,7 +91,7 @@ btnEnviar.addEventListener("click", (e) =>{
     const nombre = document.getElementById("name").value;
     const apellido = document.getElementById("lastName").value;
     const correo = document.getElementById("mail").value;
-    const rol = document.getElementById("rol").value;
+    const cargo = document.getElementById("cargo").value;
     const telefono = document.getElementById("telephone").value;
     const mensaje = document.getElementById("fm_contact").value;
     
@@ -100,10 +100,10 @@ btnEnviar.addEventListener("click", (e) =>{
     && validateTelefono(telefono)&&validateString(mensaje) */
     
     if(validator.validForm(objectValid) ===-1){
-        if(rol==="1"){
-        addStudent(nombre, apellido, correo, "Estudiante", telefono, mensaje);
-        }else if(rol==="2"){
-            addMaster(nombre, apellido, correo, "Profesor", telefono, mensaje);
+        if(cargo === "Estudiante"){
+        addStudent(nombre, apellido, correo, cargo, telefono, mensaje);
+        }else if(cargo === "Profesor"){
+            addMaster(nombre, apellido, correo, cargo, telefono, mensaje);
         }
     }else{
         modalAlert("Error en los datos, por favor revise y vuelvalo a intentar.");     

@@ -5,17 +5,18 @@ const cardsEstudiantes = document.querySelector("#cardsEstudiantes"); //Creamos 
 const cardsProfesores = document.querySelector("#cardseProfesores")
 //seleccionamos el formulario por Id para poder borrarlo
 const clean = document.querySelector("#fmContact");
+/* const select= document.querySelector("#cargo"); */
 
 //Variable de envío
 let flagSend =0;               
 
 //Creamos la funcion de estudiante
-const addStudent = (name, lastName, mail, rol, tele, msn) =>{    //creamos una funcion y dentro de ella creamos un objeto, en este caso persona, en la funcion ponemos los valores que pedimos
+const addStudent = (name, lastName, mail, cargo, tele, msn) =>{    //creamos una funcion y dentro de ella creamos un objeto, en este caso persona, en la funcion ponemos los valores que pedimos
     let person = {         //de esta maner creamos un objeto para poderlo vincular a un mensaje y que muestre todos sus atributos
         pname: name,         //le damos un nombre a cada atributo y luego seleccionamos los valores puestos en los parametros de la funcion
         plastName: lastName,
         pmail: mail,
-        prol: rol,
+        pcargo: cargo,
         ptele: tele,
         pmsn: msn
     };
@@ -25,12 +26,12 @@ const addStudent = (name, lastName, mail, rol, tele, msn) =>{    //creamos una f
     modalAlert(text, "aceptar", person);    //y con el modalAlert y los parametros vamos a hacer que lo muestre en la web
 }
 //creamos la funcion del profesor
-const addMaster = (name, lastName, mail, rol, tele, msn) =>{
+const addMaster = (name, lastName, mail, cargo, tele, msn) =>{
     let person = {
         pname: name,
         plastName: lastName,
         pmail: mail,
-        prol: rol,
+        pcargo: cargo,
         ptele: tele,
         pmsn: msn
     };
@@ -77,7 +78,7 @@ function modalAlert(cad, tipo, persona){    //Creamos una funcion anonima para p
         
         btnEnviar.onclick = function(){          //Con esta funcion le damos un evento al boton
             //!Importante
-            paintCard(persona, "estudiante");
+            paintCard(persona, " ");
             
             /* paintCard(persona, "profesor"); */
             
@@ -103,7 +104,8 @@ function modalAlert(cad, tipo, persona){    //Creamos una funcion anonima para p
 //Los datos de la persona, tipo = Estudiante/profesor/Administrador
 const paintCard = (datos, tipo) =>{
     //Convertir a Mayusculas
-    tipo = tipo.toUpperCase();    //Esto es para convertir en mayuscula sostenida todo lo que recoge //!Importante
+    const select = document.getElementById("cargo").value;
+    tipo = select.toUpperCase();    //Esto es para convertir en mayuscula sostenida todo lo que recoge //!Importante
     //Mini (Dom)
     const fragmento = document.createDocumentFragment();   //Con el fragment nos evitamos el tener que crear uno a un o los elementos que agregamos via codigo, y lo comprimimos en uno solo
     //El fragment es un miniDom
@@ -111,10 +113,10 @@ const paintCard = (datos, tipo) =>{
     if(tipo ===  "ESTUDIANTE" ){                 //!Importante
         //Se clonará TemEstudiante
         let temTemplate = temEstudiante.cloneNode(true);
-        temTemplate.querySelector('.title-card').innerHTML = `DATOS DEL PQR <hr>`;
+        temTemplate.querySelector('.title-card').innerHTML = `DATOS DEL PQR ESTUDIANTE <hr>`;
         temTemplate.querySelector('.data-card').innerHTML = `NOMBRES Y APELLIDOS: ${datos.pname} ${datos.plastName}`;
         temTemplate.querySelector('.text-mail').innerHTML = `CORREO ELECTRÓNICO: ${datos.pmail}`;
-        temTemplate.querySelector('.text-rol').innerHTML = `ROL: ${datos.prol}`;  
+        temTemplate.querySelector('.text-cargo').innerHTML = `CARGO: ${datos.pcargo}`;  
         temTemplate.querySelector('.text-telefono').innerHTML = `TELÉFONO: ${datos.ptele}`;
         temTemplate.querySelector('.text-msn').innerHTML = `MENSAJE: ${datos.pmsn}`;
         
@@ -126,10 +128,10 @@ const paintCard = (datos, tipo) =>{
     if(tipo === "PROFESOR" ){           //!Importante
         //Se clonará TemEstudiante
         let temTemplate = temMaster.cloneNode(true);
-        temTemplate.querySelector('.title-card').innerHTML = `DATOS DEL PQR <hr>`;
+        temTemplate.querySelector('.title-card').innerHTML = `DATOS DEL PQR PROFESOR <hr>`;
         temTemplate.querySelector('.data-card').innerHTML = `NOMBRES Y APELLIDOS: ${datos.pname} ${datos.plastName}`;
         temTemplate.querySelector('.text-mail').innerHTML = `CORREO ELECTRÓNICO: ${datos.pmail}`;
-        temTemplate.querySelector('.text-rol').innerHTML = `ROL: Profesor`;
+        temTemplate.querySelector('.text-cargo').innerHTML = `CARGO: ${datos.pcargo}`;
         temTemplate.querySelector('.text-telefono').innerHTML = `TELÉFONO: ${datos.ptele}`;
         temTemplate.querySelector('.text-msn').innerHTML = `MENSAJE: ${datos.pmsn}`;
         

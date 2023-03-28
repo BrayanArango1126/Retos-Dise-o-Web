@@ -27,10 +27,10 @@ class Validate{
         //De nuevo devuelve un true o false
         return resp;
     }
-    validRol(value){
-        const rolRX = 0;
+    validCargo(value){
+        const cargoRX = 0;
         //Se compara el mail con el patrón creado
-        const resp = value.match(rolRX) ?false :true; 
+        const resp = value.match(cargoRX) ?false :true; 
         //De nuevo devuelve un true o false
         return resp;
     }
@@ -44,7 +44,7 @@ class Validate{
         return resp;
     }
     validTexBox(value){
-        const textBoxRX = /^([a-zA-ZÀ-ÖØ-öø-ÿ]{3,25})([\s]?)([a-zA-ZÀ-ÖØ-öø-ÿ]{0,25})$/g;
+        const textBoxRX = /^[\W.a-zA-ZÀ-ÖØ-öø-ÿ\s\d]{20,80}$/g;
         //Se compara el mail con el patrón creado
         const resp = value.match(textBoxRX) ?true :false; 
         //De nuevo devuelve un true o false
