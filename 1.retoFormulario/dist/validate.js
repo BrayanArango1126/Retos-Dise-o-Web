@@ -54,7 +54,7 @@ class Validate{
         //Aqui tomamos los valores del objeto y se convierte en un arreglo
         const valores = Object.values(objeto);
         //Si hay match devuelve un true y si no un false
-        let resp = valores.findIndex(e => e === false); //Si no ecuentra una similitud devuelve un -1 pero si la encuentra devuelve la posicion
+        let resp = valores.findIndex(e => e === false); //Si no ecuentra una desigualdad devuelve un -1 pero si la encuentra devuelve la posicion
         return resp;
     }
 } 

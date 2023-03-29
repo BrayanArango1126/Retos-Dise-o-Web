@@ -243,7 +243,7 @@ input:focus, .msn:focus{
     color: #F2F2F2;
 } 
 .title-card{
-    font-size: 24px;
+    font-size:35px;
     padding: 2%;
 }
 .card > .data-card, .card > .text-mail{
@@ -256,16 +256,16 @@ input:focus, .msn:focus{
     border-color: #F2F2F2;
 }
 .data-card, .text-mail{
-    font-size: 22px;
+    font-size: 25px;
     color: #F2F2F2;
     padding: 1% 0;
 } 
 .text-cargo, .text-msn{
-    font-size: 22px;
+    font-size: 25px;
     padding: 1% 0;
 }
 .text-telefono{
-    font-size: 22px;
+    font-size: 25px;
     padding: 1% 0;
 }
 .btnRegistrar:hover, .btnCancelar:hover{
@@ -317,4 +317,315 @@ input:focus, .msn:focus{
 }
 .is-invalid{
     border-bottom: 4px solid #ff0404 !important;
+}
+
+/* *Medias query */ /* Tamaños de pantalla */
+
+@media (min-width: 768px) and (max-width:1000px){
+    .menu{
+        padding: 2%;
+    }
+    .menu > li{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 4.0em;
+        margin-top: 9%;
+    }
+    .fm_contact{
+        width: 70%;
+    }
+    .container_header{
+        height: 30%;
+    }
+    .alerta{
+        width: 44%;
+        top: calc(100vh - 75%);
+        left: calc(100vw - 72%);
+    }
+    .btn_enviar{
+        font-size: 30px;
+    }
+    .btn_enviar:hover{
+        transform: scale(1.2);
+    }
+    .card{
+        width: 70%;
+        margin: 5% auto; 
+        border: 4px solid #0a0a0a;
+        height: auto;   
+    }
+    .card_P{
+        width: 70%;
+        height: auto;
+        margin: 5% auto; 
+        border: 4px solid #0f0400; 
+    }
+    .title-card{
+        font-size: 35px;
+        padding: 2%;
+    }
+    .data-card, .text-mail, .text-cargo, .text-msn, .text-telefono{
+        font-size: 25px;
+        padding: 1% 2%;
+    }
+}
+
+@media(min-width:680px) and (max-width:768px){
+    .menu{
+        padding: 2%;
+    }
+    .menu >li{
+        font-size: 18px;
+        margin-bottom: 1.5%;
+    }
+    .title{
+        font-size: 3.2em;
+        margin-top: 11%;
+    }
+    .fm_contact{
+        width: 75%;
+    }
+    .container_header{
+        height: 25%;
+    }
+    .btn_enviar, .btnRegistrar, .btnCancelar{
+        width: 36%;
+        margin-top: 2.0%;
+        padding: 10px 30px;
+        font-size: 25px;
+    }
+    .btn_enviar:hover{
+        transform: scale(1.01);
+        font-size: 28px;
+        transition: all 0.8s;
+    }
+    .alerta{
+        width: 50%;
+        top: calc(100vh - 75%);
+        left: calc(100vw - 75%);
+    }
+    .textAlerta{
+        font-size: 23px;
+    }
+    .card{
+        width: 55%;
+        margin: 5% auto; 
+        border: 4px solid #0a0a0a;
+        height: auto;   
+    }
+    .card_P{
+        width: 55%;
+        height: auto;
+        margin: 5% auto; 
+        border: 4px solid #0f0400; 
+    }
+    .title-card{
+        font-size: 25px;
+        padding: 2%;
+    }
+    .data-card, .text-mail{
+        font-size: 18px;
+        padding: 1% 2%;
+    } 
+    .text-cargo, .text-msn{
+        font-size: 18px;
+        padding: 1% 2%;
+    }
+    .text-telefono{
+        font-size: 18px;
+        padding: 1% 2%;
+    }
+    .card{
+        width: 70%;
+        margin: 5% auto; 
+        border: 4px solid #0a0a0a;
+        height: auto;   
+    }
+    .card_P{
+        width: 70%;
+        height: auto;
+        margin: 5% auto; 
+        border: 4px solid #0f0400; 
+    }
+    .title-card{
+        font-size: 32px;
+        padding: 2%;
+    }
+    .data-card, .text-mail, .text-cargo, .text-msn, .text-telefono{
+        font-size: 25px;
+        padding: 1% 2%;
+    }
+}
+@media(min-width:580px) and (max-width:679px){
+    .menu{
+        padding: 1%;
+    }
+    .menu >li{
+        font-size: 15px;
+        padding: 1.7%;
+    }
+    .title{
+        font-size: 2.5em;
+        margin-top: 6%;
+    }
+    .fm_contact{
+        width: 80%;
+        height: auto;
+        margin: 3% auto;
+        border: 3.5px solid #283040;
+        border-radius: 15px;
+    }
+    .container_header{
+        height: 18%;
+    }
+    .fm_contact>input,label, button{
+        font-size: 21px;
+    }
+    .btn_enviar, .btnRegistrar, .btnCancelar{
+        width: 30%;
+        margin-top: 3%;
+        font-size: 25px;
+        padding: 2% 3%;
+    }
+    .copy{
+        line-height: 35px;
+    }
+    .alerta{
+        width: 48%;
+        top: calc(100vh - 70%);
+        left: calc(100vw - 74%);
+    }
+    .textAlerta{
+        font-size: 22px;
+    }
+    .btnAlerta{
+        font-size: 18px;
+    }
+    .btnAlerta:hover{
+        font-size: 20px;
+    }
+    .msn:focus{
+        font-size: 18px;
+    }
+    .card{
+        width: 75%;
+        margin: 5% auto; 
+        border: 3px solid #0a0a0a;
+        height: auto;   
+    }
+    .card_P{
+        width: 75%;
+        height: auto;
+        margin: 5% auto; 
+        border: 3px solid #0f0400; 
+    }
+    .title-card{
+        font-size: 28px;
+        padding: 2%;
+    }
+    .data-card, .text-mail, .text-cargo, .text-msn, .text-telefono{
+        font-size: 20px;
+        padding: 1% 2%;
+    } 
+}
+@media (min-width:340px) and (max-width:580px){
+    .title{
+        font-size: 1.5em;
+        margin-top: 6%;
+    }
+    .menu{
+        text-align: right;
+        margin: 2%;
+    }
+    .menu >li{
+        display: block;
+        text-align: center;
+        padding: 1%;
+    }
+    .title_form{
+        font-size: 33px;
+    }
+    .fm_contact{
+        width: 88%;
+        border: 3px solid #001a4a;
+    }
+    .fm_contact>input,label, button, select{
+        font-size: 15px;
+    }
+    .msn{
+        font-size: 15px;
+    }
+    .msn:focus{
+        font-size: 18px;
+    }
+    .container_header{
+        height: 21%;
+    }
+    .btn_enviar, .btnRegistrar, .btnCancelar{
+        width: 35%;
+        margin-top: 2.8%;
+        font-size: 15px;
+    }
+    .btn_enviar:hover{
+        transform: scale(1.0);
+        transition: all 0.5s;
+        width: 40%;
+        font-size: 20px;
+    }
+    .option{
+        font-size: 16px;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+    }
+    .foot >iframe{
+        width: 90%;
+    }
+    .credits{
+        height: auto;
+        padding: 2%;
+        font-size: 12px;
+    }
+    .alerta{
+        width: 55%;
+        top: calc(100vh - 75%);
+        left: calc(100vw - 78%);
+    }
+    .textAlerta{
+        font-size: 18px;
+    }
+    .btnAlerta{
+        width: 35%;
+        font-size: 15px;
+    }
+    .btnAlerta:hover{
+        transform: scale(1.21);
+        font-size: 16px;
+    }
+    .copy{
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .card{
+        width: 80%;
+        margin: 5% auto; 
+        border: 2px solid #0a0a0a;
+        height: auto;   
+    }
+    .card_P{
+        width: 80%;
+        height: auto;
+        margin: 5% auto; 
+        border: 2px solid #0f0400; 
+    }
+    .title-card{
+        font-size: 24px;
+        padding: 2%;
+    }
+    .data-card, .text-mail, .text-cargo, .text-msn, .text-telefono{
+        font-size: 17px;
+        padding: 1% 2%;
+    } 
 }

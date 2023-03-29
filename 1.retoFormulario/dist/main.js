@@ -8,12 +8,12 @@ const form = document.getElementById("fmContact");
 let validator = new Validate();
 //Objeto de validacion 
 const objectValid ={
-    nameObject: false,
-    lastNameObject: false,
-    mailObject: false,
-    cargoObjetc: false,
-    teleObject: false,
-    msnObject: false
+    nameObject: true,
+    lastNameObject: true,
+    mailObject: true,
+    cargoObjetc: true,
+    teleObject: true,
+    msnObject: true
 }
 
 //Evento para que cada vez que se genere un cambio en los hijos se genere la validacion
@@ -107,6 +107,11 @@ btnEnviar.addEventListener("click", (e) =>{
         }
     }else{
         modalAlert("Error en los datos, por favor revise y vuelvalo a intentar.");     
-    }   
+    }    
+    /* if(validator.validForm(objectValid) ===-1){
+        console.log("Enviando Formulario");
+    }else{
+        modalAlert("Error en los datos, por favor revise y vuelvalo a intentar.");     
+    } */
 });
 

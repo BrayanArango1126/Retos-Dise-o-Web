@@ -5,7 +5,6 @@ const cardsEstudiantes = document.querySelector("#cardsEstudiantes"); //Creamos 
 const cardsProfesores = document.querySelector("#cardseProfesores")
 //seleccionamos el formulario por Id para poder borrarlo
 const clean = document.querySelector("#fmContact");
-/* const select= document.querySelector("#cargo"); */
 
 //Variable de envío
 let flagSend =0;               
